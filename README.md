@@ -9,10 +9,13 @@ This project is to create a simple calendar application that allows a user to sa
 ## Process
 * Step 1.<br>
 <br>
+
 * Step 2. <br>
 <br>
+
 * Step 3. <br>
  <br>
+ 
 * Step 4. <br>
 
 
