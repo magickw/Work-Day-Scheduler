@@ -7,15 +7,15 @@ This project is to create a simple calendar application that allows a user to sa
 
 
 ## Process
-* Step 1.<br>
-<br>
+* Step 1. Creating time slots for a working day.<br>
+This step is implemented in html file by slicing a 9am-5pm working day into 9 time slots. A basic structure is thus created.<br>
 
 * Step 2. <br>
 <br>
 
 * Step 3. <br>
  <br>
- 
+
 * Step 4. <br>
 
 
