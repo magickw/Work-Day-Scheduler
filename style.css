@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  text-align: center;
 }
 
 .textarea{
@@ -69,3 +70,11 @@ body {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+footer {
+  border-top: 10px;
+  padding: 20px;
+  border-bottom: 10px;
+
+}
+
