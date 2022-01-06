@@ -8,7 +8,7 @@ This project is to create a simple calendar application that allows a user to sa
 
 ## Process
 * Step 1. Creating time slots for a working day.<br>
-This step is implemented in html file by slicing a 9am-5pm working day into 9 time slots. A basic structure is thus created.<br>
+This step is implemented in html file by slicing a 9am-5pm working day into 9 time slots. A basic structure is thus created. Assign every time slot a value for example 9, 10 11 and so on in order to determine which time slots are past, current or future by comparing them with the current hour. <br>
 
 * Step 2. <br>
 <br>
@@ -28,11 +28,13 @@ This step is implemented in html file by slicing a 9am-5pm working day into 9 ti
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
+* [Moment.js](https://momentjs.com/docs/)
+* [Bootstrap](https://getbootstrap.com/)
 
 
 # Deployed Link
 
-The link to the deployed application is: 
+The link to the deployed application is: https://magickw.github.io/Work-Day-Scheduler/
 
 
 ## Authors
