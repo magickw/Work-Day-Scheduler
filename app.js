@@ -1,3 +1,8 @@
+// Time Variables
+var today = moment().format("dddd, MMMM Do, YYYY"); // Current day
+var currentTime = moment(); //Current time
+var currentHour = moment().format("k"); //Current hour
+
 $(document).ready(function () {
 
     // Static
@@ -10,7 +15,7 @@ $(document).ready(function () {
     // Using moment format, there are different ways that we can display todays date!
     $("#date").text(moment());
     $("#date-formatted").text(moment().format());
-    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, hh:mm:ss a"));
+    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
     $("#day-week").text(moment().format('do'));
     $("#day-month").text(moment().format('Do'));
