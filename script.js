@@ -12,7 +12,7 @@ $(document).ready(function () {
             //Alert when the user clicks the Save button without typing any task
             if (savedTask !== null){
             //Save task entries in local storage.
-            localStorage.setItem(time, JSON.stringify(savedTask));
+            localStorage.setItem(time, savedTask);
             }
         });
 
