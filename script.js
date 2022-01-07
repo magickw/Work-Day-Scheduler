@@ -1,6 +1,6 @@
 $(document).ready(function () {
         //display current day & time.
-        $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); 
+        $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, LTS")); 
         //saveBtn click event listener
         $(".saveBtn").on("click", function () {
             //use this pointer
@@ -13,9 +13,9 @@ $(document).ready(function () {
 
     
         function hourTracker() {
-            //Current the number of current hour (0, 1, 2....24)
-            var currentHour = moment().format("H"); 
-            // loop over time blocks
+            //Current the number of current hour (0, 1, 2....23)
+            var currentHour = moment().hour(); 
+            // Loop over time blocks
             $(".time-block").each(function () {
                 //Get the numberd of block hours
                 var blockHour = parseInt($(this).attr("id"));
@@ -39,7 +39,7 @@ $(document).ready(function () {
         }
 
         
-                //load any saved data from LocalStorage
+                //Load any saved data from LocalStorage
                 $("#hr9 .description").val(localStorage.getItem("hr9"));
                 $("#hr10 .description").val(localStorage.getItem("hr10"));
                 $("#hr11 .description").val(localStorage.getItem("hr11"));
