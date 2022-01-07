@@ -38,13 +38,13 @@ body {
 }
 
 .hour {
-  background-color: #9297a1;
+  background-color: #f8f8fa;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
 .past {
-  background-color: #1cb6d1;
+  background-color: #828a8b;
   color: white;
 }
 
@@ -70,6 +70,7 @@ body {
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
 
 footer {
   border-top: 10px;
