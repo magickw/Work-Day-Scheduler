@@ -1,98 +1,56 @@
-// Time Variables
-var today = moment().format("dddd, MMMM Do, YYYY"); // Current day
-var currentTime = moment(); //Current time
-var currentHour = moment().format("k"); //Current hour
-
 $(document).ready(function () {
+        //display current day & time.
+        $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a")); 
+        //saveBtn click event listener
+        $(".saveBtn").on("click", function () {
+            //use this pointer
+            console.log(this);
+            var text = $(this).siblings(".description").val(); 
+            var time = $(this).parent().attr("id"); 
+            //set items in local storage.
+            localStorage.setItem(time, text);
+        })
 
-    // Static
+    
+        function hourTracker() {
+            //Current the number of current hour (0, 1, 2....24)
+            var currentHour = moment().format("H"); 
+            // loop over time blocks
+            $(".time-block").each(function () {
+                //Get the numberd of block hours
+                var blockHour = parseInt($(this).attr("id"));
+                console.log(blockHour, currentHour);
+    
+                //Compares the block hours and the current hour, and add classes of past, current or future to the block hours
+                if (blockHour < currentHour) {
+                    $(this).addClass("past");
+                    $(this).removeClass("future");
+                    $(this).removeClass("present");
+                } else if (blockHour === currentHour) {
+                    $(this).removeClass("past");
+                    $(this).addClass("present");
+                    $(this).removeClass("future");
+                } else {
+                    $(this).removeClass("present");
+                    $(this).removeClass("past");
+                    $(this).addClass("future");
+                }
+            })
+        }
 
-    // The first basic method of Moment.js is the moment() method. Use this to get today's info!
-    console.log(moment());
+        
+                //load any saved data from LocalStorage
+                $("#hr9 .description").val(localStorage.getItem("hr9"));
+                $("#hr10 .description").val(localStorage.getItem("hr10"));
+                $("#hr11 .description").val(localStorage.getItem("hr11"));
+                $("#hr12 .description").val(localStorage.getItem("hr12"));
+                $("#hr13 .description").val(localStorage.getItem("hr13"));
+                $("#hr14 .description").val(localStorage.getItem("hr14"));
+                $("#hr15 .description").val(localStorage.getItem("hr15"));
+                $("#hr16 .description").val(localStorage.getItem("hr16"));
+                $("#hr17 .description").val(localStorage.getItem("hr17"));
 
-    console.log(moment().format());
+        hourTracker(); 
 
-    // Using moment format, there are different ways that we can display todays date!
-    $("#date").text(moment());
-    $("#date-formatted").text(moment().format());
-    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
-    $("#day-week").text(moment().format('do'));
-    $("#day-month").text(moment().format('Do'));
-    $("#day-year").text(moment().format('DDDo'))
-
-    // Current Time
-    // Here we want to use setInterval to constantly update the time
-    let updateTime = function () {
-        let currentTime = moment().format('h:mm:ss')
-        $("#time").text(currentTime)
-    }
-
-    // Here we will get the number of hours in the year
-    let updateHour = function () {
-        let date = moment().dayOfYear()
-        let yearHours = date * 24
-        let todayHours = moment().hour();
-        let sumHours = yearHours + todayHours
-        $("#hours").text(sumHours)
-    }
-
-    // Here we will get the number of minutes in the week
-    let updateMinutes = function () {
-        let date = moment().weekday();
-        let weekMinutes = (date * 24 * 60) + (moment().minute());
-        $("#minutes").text(weekMinutes);
-    }
-
-    // Here we will get the number of seconds in the day
-    let updateSeconds = function () {
-        let todayHours = moment().hour();
-        let todaySeconds = todayHours * 60 * 60;
-        let thisSecond = moment().second();
-        let sumSeconds = thisSecond + todaySeconds;
-        $("#seconds").text(sumSeconds);
-    }
-
-    let countdown = function () {
-
-        // Friday
-        let friday = moment().day("fr")._d
-
-        // convert this into day of the year
-        let fridayDate = moment(friday).dayOfYear();
-
-        // This will get the milliseconds of Friday
-        let fridayMils = fridayDate * 24 * 60 * 60 * 1000
-        // Turn into seconds
-
-        // Today
-        // Turn into milliseconds
-
-        let date = moment().dayOfYear()
-        let yearMils = date * 24 * 60 * 60 * 1000
-        let todayMils = moment().hour() * 60 * 60 * 1000;
-        let thisMilsSecond = moment().second() * 1000;
-        let thisMils = moment().millisecond();
-
-        // This value should be increasing over time
-        let sumMils = yearMils + todayMils + thisMilsSecond + thisMils;
-
-        let ms = fridayMils - sumMils;
-        $("#countdown").text(ms)
-    }
-
-    // To initally set the times, we will call the functions
-    updateTime();
-    updateHour();
-    updateMinutes();
-    updateSeconds();
-    countdown();
-
-    // To continuously call the functions, we will use setInterval
-    setInterval(updateTime, 1000);
-    setInterval(updateHour, 1000);
-    setInterval(updateMinutes, 1000);
-    setInterval(updateSeconds, 1000);
-    setInterval(countdown, 1);
-
-})
+    })

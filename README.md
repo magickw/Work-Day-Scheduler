@@ -14,7 +14,7 @@ This step is implemented in html file by slicing a 9am-5pm working day into 9 ti
   By comparing the values of time blocks with the value of current hour, the time blocks will be added classes i.e. addClass() of past, current or future and thus color coded by applying CSS.
 <br>
 
-* Step 3. <br>
+* Step 3. Use .localStorage() method to store the user's input. <br>
  <br>
 
 * Step 4. <br>
@@ -22,7 +22,10 @@ This step is implemented in html file by slicing a 9am-5pm working day into 9 ti
 
 ## Demo
 
+Note: the actual results of the deployed application may be slightly different from the Demo as shown below due to the differences in CSS applied: <br>
+<img src="assets\demo.gif" alt="screenshot" />
 
+gitgit
 
 ## Built With
 
