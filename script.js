@@ -43,10 +43,13 @@ $(document).ready(function () {
                     $(this).children('textarea').addClass("past");
                 } else if (blockHour === currentHour) {
                     // If time slot is in the present, it'll be red.
+                    $(this).children('textarea').removeClass("past");
                     $(this).children('textarea').addClass("present");
                 } else {
                      // If time slot is in the future, it'll be green.
-                    $(this).children('textarea').addClass("future");
+                     $(this).children('textarea').removeClass("past");
+                     $(this).children('textarea').removeClass("present");
+                     $(this).children('textarea').addClass("future");
                 }
             })
         }
