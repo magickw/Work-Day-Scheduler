@@ -16,6 +16,7 @@ This step is implemented in html file by slicing a 9am-5pm working day into 9 ti
  <br>
 
 * Step 4. Load any saved data from LocalStorage.<br>
+  As of this step, all acceptance criteria have been met. Howerver, there is a drawback. The user can only use the Backspace key in order to delete a save entry. Therefore, I tried to add a trash button to every time block to save time.
 
 
 ## Demo
