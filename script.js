@@ -15,7 +15,18 @@ $(document).ready(function () {
             //Save task entries in local storage.
             localStorage.setItem(time, savedTask);
             }
-        })
+        });
+
+        $(".trashBtn").on("click", function () {
+            // Delete values of description in JQuery
+            var savedTask = $(this).siblings(".description").val(""); 
+            var time = $(this).parent().attr("id"); 
+            if (savedTask !== null){
+            localStorage.setItem(time, savedTask);
+            }
+        });
+
+
 
          //Load any saved data from LocalStorage
          $("#hour9 .description").val(localStorage.getItem("hour9"));
@@ -27,6 +38,8 @@ $(document).ready(function () {
          $("#hour15 .description").val(localStorage.getItem("hour15"));
          $("#hour16 .description").val(localStorage.getItem("hour16"));
          $("#hour17 .description").val(localStorage.getItem("hour17"));
+
+         
     
         function timeCheck() {
             //Current the number of current hour (0, 1, 2....23)
