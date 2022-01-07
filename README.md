@@ -23,8 +23,6 @@ This step is implemented in html file by slicing a 9am-5pm working day into 9 ti
 Note: the actual results of the deployed application may be slightly different from the Demo as shown below due to the differences in CSS applied: <br>
 <img src="demo.gif" alt="screenshot" />
 
-gitgit
-
 ## Built With
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
