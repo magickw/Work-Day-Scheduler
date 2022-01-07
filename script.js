@@ -32,21 +32,21 @@ $(document).ready(function () {
             //Current the number of current hour (0, 1, 2....23)
             var currentHour = moment().hour(); 
             // Loop over time blocks
-            $("textarea").each(function () {
+            $(".time-block").each(function () {
                 //Get the numberd of block hours
-                var blockHour = parseInt($(this).attr("id"));
+                var blockHour = parseInt($(this).attr("id").split("hour")[1]);
                 console.log(blockHour, currentHour);
     
                 //Compares the block hours and the current hour, and add classes of past, current or future to the block hours
                 if (blockHour < currentHour) {
                     // If time slot is the past time, it'll be gray.
-                    $(this).addClass("past");
+                    $(this).children('textarea').addClass("past");
                 } else if (blockHour === currentHour) {
                     // If time slot is in the present, it'll be red.
-                    $(this).addClass("present");
+                    $(this).children('textarea').addClass("present");
                 } else {
                      // If time slot is in the future, it'll be green.
-                    $(this).addClass("future");
+                    $(this).children('textarea').addClass("future");
                 }
             })
         }
