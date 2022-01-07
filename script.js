@@ -1,5 +1,5 @@
 $(document).ready(function () {
-        //display current day & time.
+        //Display current day & time.
         $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, LTS")); 
         //saveBtn click event listener
         $(".saveBtn").on("click", function () {
@@ -30,7 +30,7 @@ $(document).ready(function () {
          $("#hour16 .description").val(localStorage.getItem("hour16"));
          $("#hour17 .description").val(localStorage.getItem("hour17"));
 
-         
+         //trashBtn click event listener
         $(".trashBtn").on("click", function () {
             // Delete values of description in JQuery
             var savedTask = $(this).siblings(".description").val(""); 
