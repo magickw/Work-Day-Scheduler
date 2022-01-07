@@ -17,7 +17,7 @@ $(document).ready(function () {
         })
 
     
-        function hourTracker() {
+        function timeCheck() {
             //Current the number of current hour (0, 1, 2....23)
             var currentHour = moment().hour(); 
             // Loop over time blocks
@@ -58,7 +58,7 @@ $(document).ready(function () {
                 $("#16 .description").val(localStorage.getItem("16"));
                 $("#17 .description").val(localStorage.getItem("17"));
 
-        hourTracker(); 
+        timeCheck(); 
 
 
 

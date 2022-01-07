@@ -15,7 +15,7 @@ This step is implemented in html file by slicing a 9am-5pm working day into 9 ti
 * Step 3. Use .localStorage() method to store the user's input. <br>
  <br>
 
-* Step 4. <br>
+* Step 4. Load any saved data from LocalStorage.<br>
 
 
 ## Demo
