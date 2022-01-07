@@ -7,13 +7,12 @@ $(document).ready(function () {
             console.log(this);
             // Get values of description in JQuery
             var savedTask = $(this).siblings(".description").val(); 
+            console.log(savedTask);
             var time = $(this).parent().attr("id"); 
             //Alert when the user clicks the Save button without typing any task
-            if (savedTask === ""){
-                alert("Please enter a task!");
-            } else{
+            if (savedTask !== null){
             //Save task entries in local storage.
-            localStorage.setItem(time, savedTask);
+            localStorage.setItem(time, JSON.stringify(savedTask));
             }
         });
 
@@ -33,12 +32,13 @@ $(document).ready(function () {
          //trashBtn click event listener
         $(".trashBtn").on("click", function () {
             // Delete values of description in JQuery
-            var savedTask = $(this).siblings(".description").val(""); 
-            var time = $(this).parent().attr("id"); 
+            var savedTask = $(this).siblings(".description").val(" "); 
+            console.log(savedTask);
             if (savedTask !== null){
-            localStorage.setItem(time, savedTask);
-            }
+            localStorage.clear();
+        }
         });
+        
 
          
     
