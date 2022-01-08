@@ -32,11 +32,11 @@ $(document).ready(function () {
          //trashBtn click event listener
         $(".trashBtn").on("click", function () {
             // Delete values of description in JQuery
-            var savedTask = $(this).siblings(".description").val(" "); 
+            var savedTask = $(this).siblings(".description").val(""); 
+            var time = $(this).parent().attr("id");
             console.log(savedTask);
-            if (savedTask !== null){
-            localStorage.clear();
-        }
+            console.log(time);
+            localStorage.removeItem(time, savedTask);
         });
         
 
