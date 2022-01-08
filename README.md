@@ -8,7 +8,7 @@ This project is to create a simple calendar application that allows a user to sa
 
 ## Process
 * Step 1. Creating time slots for a working day.<br>
-This step is implemented in html file by slicing a 9am-5pm working day into 9 time slots. A basic structure is thus created. Assign every time slot a value for example 9, 10 11 and so on in order to determine which time slots are past, current or future by comparing them with the current hour. <br>
+This step is implemented in html file by slicing a 9am-5pm typical working day into 8 time slots. A basic structure is thus created. Assign every time slot a value for example 9, 10 11 and so on in order to determine which time slots are past, current or future by comparing them with the current hour. <br>
 
 * Step 2. Using momemt() functions to get the current date and time.<br>
   By comparing the values of time blocks with the value of current hour, the time blocks will be added classes i.e. addClass() of past, current or future and thus color coded by applying CSS.<br>
