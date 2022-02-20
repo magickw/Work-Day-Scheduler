@@ -84,7 +84,7 @@ footer {
   border-top: 10px;
   padding: 20px;
   border-bottom: 10px;
-  text-align: center;
+  justify-content: center;
 
 }
 
