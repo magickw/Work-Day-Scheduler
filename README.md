@@ -28,6 +28,7 @@ Note: the actual results of the deployed application may be slightly different f
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JQuery](https://jquery.com/)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
 * [Moment.js](https://momentjs.com/docs/)
 * [Bootstrap](https://getbootstrap.com/)
